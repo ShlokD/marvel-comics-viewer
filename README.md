@@ -1,3 +1,3 @@
-### Vanilla JS Boilerplate
+### Marvel Comcis Viewer
 
-Vanilla JS, CSS and HTML Boilerplate with Babel, Webpack, PostCSS and ESLint
+View Marvel Comics

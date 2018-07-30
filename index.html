@@ -4,14 +4,34 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
-  <title>Boilerplate</title>
+  <title>Marvel Comics Viewer</title>
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <link rel="stylesheet" href="dist/css/app.css">
 </head>
 
 <body>
-  <p>Boilerplate App</p>
+
+  <header class="app-header">
+    <h1>Marvel Comics Viewer</h1>
+  </header>
+
+  <main>
+    <div id="comics-content">
+      <template id="comics-template">
+        <div class="comic-card">
+          <img class="comic-img" src="" />
+          <p class="comic-title">Title</p>
+          <p class="comic-price">Price</p>
+        </div>
+      </template>
+    </div>
+
+  </main>
+
+  <footer class="app-footer">
+    <a href=\ "http://marvel.com\">Data provided by Marvel. © 2018 MARVEL</a>
+  </footer>
   <script src="dist/js/app.bundle.js"></script>
 </body>
 

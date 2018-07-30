@@ -1,0 +1,116 @@
+@import './normalize.scss';
+@import url('https://fonts.googleapis.com/css?family=Oxygen');
+
+$font-stack: 'Oxygen', sans-serif;
+
+$maroon: #3F1821;
+$red: #8E2623;
+$cream: #AA9383;
+$dark-green: #143443;
+$pale-blue: #c6fffa;
+$bg-gray: #fafafa;
+
+* {
+  font-family: $font-stack;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  background-color: $bg-gray;
+}
+
+.app-header,.app-footer {
+  width: 100%;
+  display: block;
+  text-align: center;
+
+  background-color: $dark-green;
+  color: $pale-blue;
+  padding: 2em 0.3em;
+}
+
+.app-header {
+  text-shadow: 0px 0px 8em $bg-gray;
+
+  h1 {
+    margin: 0;
+    font-size: 2.2em;
+  }
+}
+
+.app-footer {
+  position: relative;
+  bottom: 0;
+
+  a {
+    color: $pale-blue;
+    text-decoration: none;
+  }
+}
+
+
+main {
+  min-height: 80%;
+}
+
+#comics-content {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+
+  margin: 1em;
+}
+
+.comic-card {
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+  position: relative;
+  box-shadow: 2px 2px 10px $dark-green;
+
+  flex: 1;
+  flex-basis: 50%;
+  margin: 0.5em;
+  padding: 1em;
+
+  .comic-img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .comic-title {
+    font-size: 1.5em;
+    font-weight: 700;
+    text-align: center;
+  }
+
+  .comic-price {
+    font-size: 1em;
+    position: absolute;
+    left: 70.8%;
+    top: -3%;
+    background-color: $cream;
+    color: white;
+    padding: 1.2em;
+    opacity: 0.9;
+  }
+}
+
+@media (min-width: 768px){
+  .app-header,.app-footer {
+    text-align: left;
+    padding: 2em 0.8em;
+  }
+  .comic-card {
+    flex-basis: 30%;
+  }
+}
+
+@media(min-width: 1440px) {
+  .comic-card {
+    flex-basis: 15%;
+  }
+}

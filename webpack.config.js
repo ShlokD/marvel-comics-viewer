@@ -9,7 +9,6 @@ const miniCSSPlugin = new MiniCssExtractPlugin({
 });
 
 const config = {
-
   context: path.resolve(__dirname, 'src'),
 
   entry: {
@@ -19,6 +18,10 @@ const config = {
   output: {
     path: path.resolve(__dirname, 'dist'),
     filename: './js/[name].bundle.js'
+  },
+
+  node: {
+    process: false
   },
 
   module: {
@@ -35,11 +38,12 @@ const config = {
         }
       },
       {
-        test: /\.css$/,
+        test: /\.scss$/,
         use: [
           'style-loader',
           MiniCssExtractPlugin.loader,
           'css-loader',
+          'sass-loader',
           'postcss-loader'
         ]
       },
