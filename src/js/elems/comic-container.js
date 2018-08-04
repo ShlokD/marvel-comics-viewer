@@ -21,13 +21,9 @@ export class ComicContainer {
     return card;
   }
 
-  populate(comicsData) {
-    const duplicatedComicsData = comicsData.concat(comicsData).concat(comicsData).concat(comicsData).concat(comicsData).concat(comicsData);
-    const comicsFragment = new DocumentFragment();
-
-    console.log(duplicatedComicsData);
-
-    duplicatedComicsData.forEach((comic) => comicsFragment.appendChild(this.createComic(comic)));
+  populate(comicsData = []) {
+    const comicsFragment = new document.DocumentFragment();
+    comicsData.forEach((comic) => comicsFragment.appendChild(this.createComic(comic)));
     this.dom.append('#comics-content', comicsFragment);
   }
 }
